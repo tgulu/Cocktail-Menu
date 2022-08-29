@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.R
 import androidx.navigation.fragment.findNavController
-import com.example.cocktail_menu.databinding.BaseFragBinding
+
+import com.example.cocktail_menu.databinding.HomeFragBinding
 
 //import com.example.artmuseumapp.R
 //import com.example.artmuseumapp.databinding.FragmentInitialBinding
@@ -15,7 +16,7 @@ import com.example.cocktail_menu.databinding.BaseFragBinding
 class BaseFragment : Fragment() {
 
     private val binding by lazy {
-        BaseFragBinding.inflate(layoutInflater)
+        HomeFragBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +31,7 @@ class BaseFragment : Fragment() {
 
         binding.initialButton.setOnClickListener{
             findNavController()
-                .navigate(R.id.)
+                .navigate(R.id.a)
                // .navigate(R.id.action_initialFragment_to_recyclerViewFragment)
         }
 

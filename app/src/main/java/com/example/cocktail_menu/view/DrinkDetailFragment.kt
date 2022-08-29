@@ -33,7 +33,7 @@ class DrinkDetailFragment : Fragment() {
 
         viewModel.fragmentDetail
             .observe(viewLifecycleOwner) { set ->
-                binding.drinkImage.text = set?.strDrink
+                binding.drinkTitle.text = set?.strDrink
 
                 //binding.ArtDescription.text = set.description.toString()
 
@@ -41,8 +41,9 @@ class DrinkDetailFragment : Fragment() {
                 binding.drinkDetail.text = description.toString()
 
                 Picasso.get()
-                    .load(set?.strDrinkThumb?.get(0)?.strDrinkThumb)
-                    .resize(1000, 1000)
+                    .load(set?.strDrinkThumb)
+                    .fit()
+                    //.resize(1000, 1000)
                     .into(binding.drinkImage)
             }
 
@@ -53,7 +54,7 @@ class DrinkDetailFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() =
-            InitialFragment()
+            BaseFragment()
     }
 
 }
