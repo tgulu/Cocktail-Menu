@@ -10,9 +10,7 @@ interface DrinkRepository {
 
 }
 
-class DrinkRepoImplementation @Inject constructor (private val drinksAPI: DrinksAPI)
-    : DrinkRepository{
-
+class DrinkRepoImplementation @Inject constructor (private val drinksAPI: DrinksAPI): DrinkRepository{
 
     override suspend fun getADrink(): Response<DrinkMenu> = drinksAPI.getADrink()
     override suspend fun getRandomDrink(): Response<DrinkMenu> = drinksAPI.getRandomDrink()

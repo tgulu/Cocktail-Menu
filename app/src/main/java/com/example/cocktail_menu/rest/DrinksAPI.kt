@@ -22,7 +22,7 @@ interface DrinksAPI {
 
 
     companion object{
-        const val API_KEY = "1"
+//        const val API_KEY = "1"
         const val BASE_URL = "http://www.thecocktaildb.com/api/json/v1/1/"
         const val PATH_URL = "search.php?f=a"
         const val RANDOM_DRINK = "random.php"

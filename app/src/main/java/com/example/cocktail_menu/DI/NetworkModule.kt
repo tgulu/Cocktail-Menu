@@ -1,12 +1,13 @@
 package com.example.cocktail_menu.DI
 
-import com.example.artmuseumapp.rest.ArtAPI
-import com.example.artmuseumapp.rest.ArtRepoImplementation
-import com.example.artmuseumapp.rest.ArtRepository
-import com.example.artmuseumapp.viewmodel.ArtViewModel
+//import com.example.artmuseumapp.rest.ArtAPI
+//import com.example.artmuseumapp.rest.ArtRepoImplementation
+//import com.example.artmuseumapp.rest.ArtRepository
+//import com.example.artmuseumapp.viewmodel.ArtViewModel
 import com.example.cocktail_menu.rest.DrinkRepoImplementation
 import com.example.cocktail_menu.rest.DrinkRepository
 import com.example.cocktail_menu.rest.DrinksAPI
+import com.example.cocktail_menu.viewmodel.DrinkViewModel
 import com.google.gson.Gson
 import io.reactivex.schedulers.Schedulers.single
 import okhttp3.OkHttpClient
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit
 
 
 
-val NetworkModule = module{
+val NetworkModule = module {
 
     fun providesGson(): Gson = Gson()
 
@@ -55,5 +56,5 @@ val NetworkModule = module{
 
 val viewModelModule = module{
 
-    viewModel { ArtViewModel(get())}
+    viewModel { DrinkViewModel(get())}
 }
